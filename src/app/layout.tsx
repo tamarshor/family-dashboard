@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Family Dashboard",
-  description: "Our family dashboard",
+  title: "Kapuya Family Dashboard",
+  description: "The Kapuya family's shared dashboard",
 };
 
 export default function RootLayout({
