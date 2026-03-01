@@ -77,14 +77,17 @@ export default function GroceryList() {
     });
 
     setGroceryInput("");
+    fetchItems();
   }
 
   async function markOrdered(id: string) {
     await supabase.from("groceries").update({ status: "ordered" }).eq("id", id);
+    fetchItems();
   }
 
   async function removeItem(id: string) {
     await supabase.from("groceries").delete().eq("id", id);
+    fetchItems();
   }
 
   if (!loaded) return null;
